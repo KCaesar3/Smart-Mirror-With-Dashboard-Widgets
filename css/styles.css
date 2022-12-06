@@ -1,0 +1,95 @@
+/* Grid */
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  height: 100vh;
+}
+
+.layout {
+  /* Set your own grid   */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 3em;
+  place-items: center;
+}
+
+/* Widgets */
+section {
+  padding: 1em;
+  padding: 1em 5em;
+  /* Relative Parent. Absolute Child */
+  position: relative;
+  box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05),
+    15px 25px 10px rgba(0,0,0,0.05),
+    15px 20px 20px rgba(0,0,0,0.05),
+    inset -10px -10px 15px rgba(225,225,225,0.9);
+  border-radius: 50%;
+ 
+}
+
+/* Time */
+.time {
+  padding: 7em;
+}
+
+.hours {
+  font-size: 2em;
+}
+
+.minutes {
+  font-size: 2em;
+}
+
+.seconds {
+  font-size: 1.25em;
+}
+
+.amOrPM {
+  
+}
+
+/* Date */
+.date {
+  padding: 7em;
+}
+
+.month {
+  font-size: 2em;
+}
+
+.dayOfMonth {
+  font-size: 2em;
+}
+
+.year {
+  font-size: 1.25em;
+}
+
+.dayOfWeek {
+}
+
+/* Weather */
+.weather {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: grid;
+  place-items: center;
+  
+}
+
+.city {
+  font-size: 3em;
+}
+
+.temp {
+  font-size: 1.25em;
+  
+}
+
+.weather img {
+}
