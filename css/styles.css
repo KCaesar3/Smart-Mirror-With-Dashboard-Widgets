@@ -9,32 +9,48 @@ body {
   height: 100vh;
 }
 
+
 video {
   /*  display: none;  */
   
-    position: absolute;
+    /*position: absolute;
     height: 100vh;
     width: 100vw;
   
     object-fit: cover;
-    object-position: center;
+    object-position: center;*/
+
+
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
     
     z-index: -1;
   }
+
 
 .layout {
   /* Set your own grid   */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 3em;
+  grid-template-rows: repeat(9, 1fr);
+  /*grid-gap: 1em;*/
   place-items: center;
 }
 
 /* Widgets */
 section {
   padding: 1em;
-  padding: 1em 5em;
+  padding: 1em 4em;
   /* Relative Parent. Absolute Child */
   position: relative;
   box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05),
@@ -47,7 +63,11 @@ section {
 
 /* Time */
 .time {
-  padding: 7em;
+  padding: 5em;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 7;
 }
 
 .hours {
@@ -68,7 +88,11 @@ section {
 
 /* Date */
 .date {
-  padding: 7em;
+  padding: 5em;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 
 .month {
@@ -89,7 +113,9 @@ section {
 /* Weather */
 .weather {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
+  grid-row-start: 7;
+  grid-row-end: 9;
   display: grid;
   place-items: center;
   
